@@ -1,0 +1,44 @@
+
+<ion-content no-padding class="renting-detail">
+<ion-grid no-padding *ngIf="contractmsg">
+  <ion-row class="order-num">
+    <ion-col col-6 ion-text text-left >合同号</ion-col>
+    <ion-col col-6 ion-text text-right color="txt-tertiary">{{contractmsg.uuid}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6 ion-text text-left>房间号</ion-col>
+    <ion-col col-6 ion-text text-right color="txt-tertiary">{{contractmsg.houseNo}}</ion-col>
+  </ion-row>
+  <ion-row class="startdate">
+    <ion-col col-6 ion-text text-left>起租日期</ion-col>
+    <ion-col col-6 ion-text text-right color="txt-tertiary">{{contractmsg.leaseStart}}</ion-col>
+  </ion-row>
+  <ion-row class="enddate">
+    <ion-col col-6 ion-text text-left>结束日期</ion-col>
+    <ion-col col-6 ion-text text-right color="txt-tertiary">{{contractmsg.leaseEnd}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6 ion-text text-left>租金</ion-col>
+    <ion-col col-6 ion-text text-right color="txt-tertiary">&yen;{{contractmsg.rental}}/月</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6 ion-text text-left>押金</ion-col>
+    <ion-col col-6 ion-text text-right color="txt-tertiary">&yen;{{contractmsg.deposit}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6 ion-text text-left>付款方式</ion-col>
+    <ion-col col-6 ion-text text-right color="txt-tertiary">{{contractmsg.payWayName}}</ion-col>
+  </ion-row>
+
+  <ion-row class="bottom-btn">
+    <ion-col col-3 ion-text text-center><span class="changeHouse" (click)="exchange()">换房</span></ion-col>
+    <ion-col col-3 ion-text text-center (click)="repeal()">退房</ion-col>
+    <ion-col class="right-btn" col-3 >
+      <button  ion-button color="main" outline>查看合同</button>
+    </ion-col>
+    <ion-col class="right-btn" col-3 >
+      <button ion-button color="main" outline (click)="gotoPayRent()">交房租</button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

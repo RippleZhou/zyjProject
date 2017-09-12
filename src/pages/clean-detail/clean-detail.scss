@@ -1,0 +1,55 @@
+page-clean-detail {
+  .clean-detail{
+    background-color: #EFEFF4;
+    .banner{
+      height: 175px;
+      .swiper-pagination{
+        text-align: right;
+      }
+    }
+
+    .goods-msg{
+      .goods-title{
+        height: 55px;
+        background-color: #fff;
+        line-height:55px;
+        font-size: 2.25rem;
+        color:#333;
+        padding:0 10px;
+        margin-bottom:10px;
+        font-weight: bold;
+        .price{
+          font-size:1.25rem;
+          font-weight: normal;
+          span{
+            font-size:2.25rem;
+          }
+        }
+      }
+      .rent-inform{
+        background-color: #fff;
+        height: 44px;
+        line-height:44px;
+        border-bottom:0.55px solid #EFEFF4;
+        padding-left:10px;
+        font-size:1.375rem;
+        color:#333;
+        font-weight: bold;
+      }
+      .inform{
+        background-color: #fff;
+        min-height: 300px;
+        font-size:1.375rem;
+        color:#888;
+        padding:10px 15px;
+        margin-bottom:10px;
+        p{
+          margin:2px 4px;
+        }
+      }
+      .btn{
+        font-size:1.625rem;
+      }
+    }
+  }
+}

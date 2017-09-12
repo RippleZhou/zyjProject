@@ -1,0 +1,36 @@
+page-system-message {
+  .system-message{
+    background-color: #EFEFF4;
+    .activity-item{
+      min-height: 100px;
+      .title{
+        font-size:1.875rem;
+      }
+      .desc{
+        font-size:1.5rem;
+      }
+      .date{
+        position: absolute;
+        right: 5px;
+        bottom: 10px;
+        font-size:1.375rem;
+      }
+      ion-thumbnail{
+        img{
+          width: 125px;
+          height: 90px;
+        }
+      }
+    }
+    ion-item.activity-item {
+      border: none !important;
+      margin-top: 10px;
+      /deep/ .item-inner {
+        border: none !important;
+      }
+      /deep/ .input-wrapper {
+        align-items: flex-start;
+      }
+    }
+  }
+}

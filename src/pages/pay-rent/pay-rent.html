@@ -1,0 +1,19 @@
+
+<ion-content no-padding class="pay-rent">
+<ion-grid radio-group>
+  <ion-row ion-text [color]="bill.status ==2?'txt-tertiary':'qgy-orange'"
+           *ngFor="let bill of Rentbills;">
+    <ion-col col-4 ion-text text-center>{{(bill.startTime).split(' ',1)[0]}}</ion-col>
+    <ion-col col-3 ion-text text-left >&yen;{{bill.money}}</ion-col>
+    <ion-col col-3 ion-text text-center >{{bill.statusName}}</ion-col>
+    <ion-col col-2 ion-text text-center>
+      <ion-icon [name]="bill.id ?'orange':'check'" (click)="itemClick(bill)" *ngIf="bill.status == 1"
+      ></ion-icon>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  <button full-width ion-button no-margin class="submit-btn" (click)="submit()">
+    提交
+  </button>
+
+</ion-content>

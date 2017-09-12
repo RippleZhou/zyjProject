@@ -1,0 +1,63 @@
+page-reservation {
+  .reservation{
+    background-color: #EFEFF4;
+    font-size:1.625rem;
+    .input-group {
+      margin-top: 10px;
+      width: 100%;
+
+
+      > ion-row {
+        height: 44px;
+        padding: 0 5px;
+        border-bottom: 0.55px solid #EFEFF4;
+        background-color: white;
+        ion-col{
+          display: flex;
+          align-items: center;
+          ion-select {
+            max-width: none;
+            padding: 0;
+
+            /deep/ .select-icon{
+              display: none;
+            }
+          }
+          input{
+            width: 100%;
+          }
+        }
+      }
+
+      &:first-child {
+        margin-top: 10px;
+      }
+      .gender{
+        margin-bottom:10px;
+      }
+
+    }
+    .verification{
+      line-height:44px;
+      .verification-code{
+        min-width:100px;
+        border-radius: 0;
+        font-size:1.5rem;
+      }
+    }
+
+    .date{
+      padding-left: 3px;
+    }
+    .submit-btn{
+      border-radius: 0;
+      height: 44px;
+      margin-top: 20px;
+    }
+  }
+
+  .text-invalid{
+    color: red;
+  }
+
+}

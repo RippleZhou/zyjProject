@@ -1,0 +1,36 @@
+page-exchange-record {
+.exchange-record{
+  background-color: #EFEFF4;
+  .exchanges-item{
+    min-height: 100px;
+    .title{
+      font-size:2.25rem;
+    }
+    .status{
+      font-size:1.875rem;
+    }
+    .date{
+      position: absolute;
+      bottom: 15px;
+      font-size:1.5rem;
+    }
+    ion-thumbnail{
+      img{
+        width: 75px;
+        height: 75px;
+      }
+    }
+  }
+
+  ion-item.exchanges-item {
+    border: none !important;
+    margin-top: 10px;
+    /deep/ .item-inner {
+      border: none !important;
+    }
+    /deep/ .input-wrapper {
+      align-items: flex-start;
+    }
+  }
+}
+}

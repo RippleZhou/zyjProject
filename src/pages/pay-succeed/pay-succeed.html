@@ -1,0 +1,27 @@
+
+<ion-content no-padding class="pay-succeed">
+<ion-grid class="pay">
+  <ion-row class="icon">
+    <ion-col no-margin no-padding>
+      <ion-icon name="pay-succeed" no-padding no-margin></ion-icon>
+    </ion-col>
+  </ion-row>
+  <ion-row class="order-msg" text-center>
+    <p>订单支付成功!</p>
+  </ion-row >
+  <ion-row class="num" text-center>
+    <p>&yen;{{checkstand.money}}</p>
+  </ion-row>
+  <ion-row class="num" text-center>
+    <p>{{checkstand.billNo}}</p>
+  </ion-row>
+  <ion-row class="btn">
+    <ion-col col-6 text-right>
+      <button ion-button color="main" no-margin outline (click)="gotoPaySucceedDetail()">查看详情</button>
+    </ion-col>
+    <ion-col col-6 text-left>
+      <button ion-button color="main" no-margin outline (click)="gotohome() ">返回主页</button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

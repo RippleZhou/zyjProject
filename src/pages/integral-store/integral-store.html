@@ -1,0 +1,42 @@
+<!--
+  Generated template for the IntegralStore page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content no-padding>
+
+  <ion-card class="card-background-page" no-padding>
+    <img src="./assets/images/jfsc.jpg"/>
+    <div class="card-top">
+      <span text-right>积分说明</span>
+      <ion-icon name="integral-explain" item-right></ion-icon>
+    </div>
+    <div class="card-background">
+      <img src="../assets/icon/jfty.svg" alt=""></div>
+    <div class="card-subtitle">积分</div>
+    <div class="card-number">8888</div>
+    <button ion-button outline ion-center class="card-tbn" (click)="gotoExchangeRecord()">
+      兑换记录</button>
+  </ion-card>
+
+  <ion-grid text-center class="commodity-menu" no-padding>
+    <ion-row>
+      <ion-col class="commoditys" col-6 *ngFor="let v of commoditys"
+        (click)="gotoIntegralMall(v);">
+      <ion-grid class="goods">
+      <ion-row><img src="{{v.image}}" alt=""></ion-row>
+      <ion-row justify-content-between class="goods-msg" >
+        <ion-col no-padding text-left class="name">{{v.name}}</ion-col>
+        <ion-col no-padding text-right
+                 class="fire-text-gradient price"><span
+          class="fire-text-gradient">{{v.price}}</span>分
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

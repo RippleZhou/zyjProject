@@ -1,0 +1,112 @@
+page-home {
+  .banner{
+    height: 175px;
+  }
+  .swiper-pagination{
+    text-align: right;
+  }
+  .main-menu {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    background-color: white;
+
+    ion-col {
+      padding-bottom: 25px;
+
+      img {
+        height: 40px;
+      }
+      div {
+        margin-top: 15px;
+      }
+    }
+  }
+  .title{
+    background-color: white;
+    margin-bottom: 70px;
+    .awesome-title {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+
+      div:nth-child(1) {
+        font-size: 3rem;
+      }
+
+      div:nth-child(2) {
+        font-size: 2.25rem;
+        position: absolute;
+        top: calc((100% - 18px)/2);
+        left: calc((100% - 88px)/2);
+      }
+
+      div:nth-child(3){
+        width: 10px;
+        height: 2px;
+        background-color: map_get($colors,main);
+        margin-top: 6px;
+
+      }
+    }
+  }
+  .apartments{
+    box-shadow: none;
+    border-bottom: 1px solid #EFEFF4;
+    padding-bottom: 25px;
+    margin: 0 10px 25px 10px;
+    width: calc(100% - 20px);
+    img{
+      width: 355px;
+      height: 175px;
+    }
+    ion-card-title{
+      padding:15px 0 10px 0;
+    }
+    .city{
+      font-size: 2.25rem;
+    }
+    .price{
+      font-size: 1.375rem;
+      span{
+        font-size: 2.25rem;
+      }
+    }
+    .brief{
+      font-size:1.5rem;
+      margin-bottom: 5px;
+    }
+    .address{
+      font-size: 1.375rem;
+      //margin-top: 10px;
+      ion-icon{
+        width: 15px;
+        height: 15px;
+      }
+    }
+    button{
+      border-radius: 0;width:
+      75px;height: 30px;
+      font-size: 12px;
+      position: absolute; right: 0;
+    }
+  }
+  .bottom-tab{
+    position:fixed;
+    bottom: 0;
+    background-color: #fff;
+    ion-col{
+      height: 50px;
+      font-size: 1.5rem;
+      color:#b2b2b2;
+    }
+    ion-icon{
+      height: 30px;
+      width: 30px;
+
+    }
+  }
+
+}

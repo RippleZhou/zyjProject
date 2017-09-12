@@ -1,0 +1,21 @@
+<ion-content no-padding class="my-order">
+  <ion-grid class="order" *ngFor="let msg of appointmentList">
+    <ion-row class="order-msg">
+      <ion-col col-6 class="shop" color="txt-primary" ion-text>{{msg.buzProductName}}</ion-col>
+      <ion-col col-6 text-right ion-text class="status" color="main">{{msg.statusName}}</ion-col>
+    </ion-row>
+    <ion-row class="date" color="txt-tertiary" ion-text>
+      <ion-col col-3 >预约时间:</ion-col>
+      <ion-col col-9 ion-text class="order-time">{{msg.createTime}}</ion-col>
+    </ion-row>
+    <ion-row class="date" color="txt-tertiary" ion-text>
+      <ion-col col-3 >看房时间:</ion-col>
+      <ion-col col-9 ion-text class="order-time">{{msg.providerTime}}</ion-col>
+    </ion-row>
+    <ion-row class="date" color="txt-tertiary" ion-text >
+      <ion-col col-3>联系人:</ion-col>
+      <ion-col col-2 ion-text>{{msg.providerName}}</ion-col>
+      <ion-col col-7> {{msg.providerPhone}}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

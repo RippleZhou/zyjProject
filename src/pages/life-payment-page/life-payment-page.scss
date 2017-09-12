@@ -1,0 +1,71 @@
+page-life-payment-page {
+  .life-payment{
+    background-color: #EFEFF4;
+
+    ion-icon{
+      height: 15px;
+      width: 15px;
+      position: relative;
+      top: 3px;
+      margin-right:5px;
+    }
+
+    ion-grid{
+      background-color: #fff;
+      ion-row{
+        height: 44px;
+      }
+    }
+
+    .input-group {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+
+      > ion-row {
+        ion-col{
+          display: flex;
+          align-items: center;
+
+          input{
+            width: 100%;
+          }
+        }
+      }
+      .apartment{
+        border-bottom: 0.55px solid #EFEFF4;
+      }
+
+    }
+    .dark{
+      background-color: #EFEFF4;
+      height: 35px;
+      line-height: 35px;
+      padding: 0 10px;
+    }
+    .amount{
+      height: 44px;
+      line-height: 44px;
+      padding: 0 10px;
+      font-size:1.5rem;
+      color:#333;
+
+    }
+    .wechat{
+      height: 44px;
+      line-height: 44px;
+      border-bottom:0.55px solid #EFEFF4;
+      padding: 0 10px;
+    }
+    .zfb{
+      height: 44px;
+      line-height: 44px;
+      padding: 0 10px;
+    }
+    button{
+      margin-top:30px;
+    font-size:1.75rem;
+    min-height:44px;
+   }
+  }
+}

@@ -1,0 +1,28 @@
+
+
+<ion-content no-padding class="live-people">
+  <ion-grid class="input-group" no-padding>
+    <ion-row class="name">
+      <ion-col col-3 text-left>姓名</ion-col>
+      <ion-col >
+        <ion-input text-right [(ngModel)]="data.name" type="text"  no-margin
+                   placeholder="请输入姓名"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-3 text-left>身份证号</ion-col>
+      <ion-col>
+        <ion-input text-right  no-margin
+          [(ngModel)]="data.idNum" type="text" placeholder="请输入身份证号"></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <button full-width ion-button no-margin [color]="(data.name && data.idNum)?'main':'main-a-40'"
+          style="border-radius: 0; height: 44px; margin-top: 20px"
+          [disabled]="!data.name || !data.idNum"
+          (click)="submit()">
+    保存
+  </button>
+</ion-content>

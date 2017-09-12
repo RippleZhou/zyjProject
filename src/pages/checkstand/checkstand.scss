@@ -1,0 +1,62 @@
+page-checkstand {
+.checkstand{
+  background-color: #EFEFF4;
+  .order-form{
+
+    ion-row{
+      background-color: #fff;
+      padding: 8px 10px;
+    }
+    ion-col{
+      padding:0;
+      background-color: #fff;
+    }
+    ion-icon{
+      height: 15px;
+      width: 15px;
+      position: relative;
+      top: 3px;
+      margin-right:5px;
+    }
+    .order-msg{
+      font-size:1.5rem;
+      color:#888;
+    }
+    .order-num{
+      margin-top:10px;
+      padding-top:15px;
+    }
+    .dark{
+      background-color: #EFEFF4;
+      height: 35px;
+      line-height: 35px;
+      padding: 0 10px;
+    }
+    .amount{
+      height: 44px;
+      line-height: 44px;
+      padding: 0 10px;
+      font-size:1.5rem;
+      color:#333;
+
+    }
+    .wechat{
+      height: 44px;
+      line-height: 44px;
+      border-bottom:0.55px solid #EFEFF4;
+      padding: 0 10px;
+    }
+    .zfb{
+      height: 44px;
+      line-height: 44px;
+      padding: 0 10px;
+      margin-bottom:30px;
+    }
+
+  }
+  button{
+    font-size:1.75rem;
+    min-height:44px;
+  }
+}
+}

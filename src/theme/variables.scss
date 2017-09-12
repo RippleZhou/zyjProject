@@ -1,0 +1,204 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+$font-path: "../assets/fonts";
+
+@import "ionic.globals";
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary: #90c31f,
+  //primary: #488aff,
+  secondary: #32db64,
+  danger: #f53d3d,
+  light: #f4f4f4,
+  white:#fff,
+  dark: #222,
+  main: #90c31f, // 主色
+  main-a-40: rgba(#90c31f, .4), // 主色 40% 透明度
+  txt-primary: #333, // 文本主色
+  txt-secondary: #888, // 文本次要
+  txt-tertiary: #b2b2b2, // 文本更次
+  qgy-orange:#EA6000
+);
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+@import "ionic.ionicons";
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+// Utils
+// --------------------------------------------------
+[full-width] {
+  width: 100% !important;
+}
+
+[full-height] {
+  height: 100% !important;;
+}
+
+[full-size] {
+  width: 100% !important;;
+  height: 100% !important;;
+}
+
+[no-border]{
+  border: none !important;
+}
+
+@mixin ion-icon-base(){
+  width: 24px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  margin: 5px;
+  opacity: 0.9;
+}
+@mixin ion-icon-content($c){
+  content: $c;
+  @include ion-icon-base;
+}
+// 添加自定义图标
+// 使用 SVG 无法修改颜色
+.ion-ios-qgy-mine,.ion-ios-qgy-mine-outline,.ion-md-qgy-mine {
+  @include ion-icon-content(url(../assets/btn-nav/我的.svg));
+}
+.ion-ios-qgy-home,.ion-ios-qgy-home-outline,.ion-md-qgy-home {
+  @include ion-icon-content(url(../assets/btn-nav/首页.svg));
+}
+.ion-ios-qgy-activity,.ion-ios-qgy-activity-outline,.ion-md-qgy-activity {
+  @include ion-icon-content(url(../assets/btn-nav/活动.svg));
+}
+.ion-ios-integral-explain,.ion-ios-integral-explain,.ion-md-integral-explain {
+  @include ion-icon-content(url(../assets/icon/jfsm.svg));
+}
+.ion-ios-add,.ion-ios-add,.ion-md-add {
+  @include ion-icon-content(url(../assets/icon/add.svg));
+}
+.ion-ios-detailed-account,.ion-ios-detailed-account,.ion-md-detailed-account {
+  @include ion-icon-content(url(../assets/icon/detailedaccount.svg));
+}
+.ion-ios-check,.ion-ios-check,.ion-md-check {
+  @include ion-icon-content(url(../assets/icon/check.svg));
+}
+.ion-ios-check-on,.ion-ios-check-on,.ion-md-check-on {
+  @include ion-icon-content(url(../assets/icon/check-on.svg));
+}
+.ion-ios-wechat,.ion-ios-wechat,.ion-md-wechat {
+  @include ion-icon-content(url(../assets/icon/wechat.svg));
+}
+.ion-ios-zfb,.ion-ios-zfb,.ion-md-zfb {
+  @include ion-icon-content(url(../assets/icon/zfb.svg));
+}
+.ion-ios-pay-succeed,.ion-ios-pay-succeed,.ion-md-pay-succeed {
+  @include ion-icon-content(url(../assets/icon/pay-succeed.svg));
+}
+.ion-ios-logo,.ion-ios-logo,.ion-md-logo {
+  @include ion-icon-content(url(../assets/icon/logo.svg));
+}
+.ion-ios-phone,.ion-ios-phone,.ion-md-phone {
+  @include ion-icon-content(url(../assets/icon/phone.svg));
+}
+.ion-ios-verification,.ion-ios-verification,.ion-md-verification {
+  @include ion-icon-content(url(../assets/icon/verification.svg));
+}
+.ion-ios-location,.ion-ios-location,.ion-md-location {
+  @include ion-icon-content(url(../assets/icon/location.svg));
+}
+.ion-ios-man-off,.ion-ios-man-off,.ion-md-man-off {
+  @include ion-icon-content(url(../assets/icon/man-off.svg));
+}
+.ion-ios-woman-off,.ion-ios-woman-off,.ion-md-woman-off {
+  @include ion-icon-content(url(../assets/icon/woman-off.svg));
+}
+.ion-ios-woman-on,.ion-ios-woman-on,.ion-md-woman-on {
+  @include ion-icon-content(url(../assets/icon/woman-on.svg));
+}
+.ion-ios-man-on,.ion-ios-man-on,.ion-md-man-on {
+  @include ion-icon-content(url(../assets/icon/man-on.svg));
+}
+.ion-ios-add-pic,.ion-ios-add-pic,.ion-md-add-pic {
+  @include ion-icon-content(url(../assets/icon/add-pic.svg));
+}
+.ion-ios-smile,.ion-ios-smile,.ion-md-smile {
+  @include ion-icon-content(url(../assets/icon/smile.svg));
+}
+.ion-ios-ellipse,.ion-ios-ellipse,.ion-md-ellipse {
+  @include ion-icon-content(url(../assets/icon/ellipse.svg));
+}
+.ion-ios-default,.ion-ios-default,.ion-md-default {
+  @include ion-icon-content(url(../assets/icon/default.svg));
+}
+.ion-ios-expire,.ion-ios-expire,.ion-md-expire {
+  @include ion-icon-content(url(../assets/icon/expire.svg));
+}
+.ion-ios-half-apple,.ion-ios-half-apple,.ion-md-half-apple {
+  @include ion-icon-content(url(../assets/icon/half-apple.svg));
+}
+.ion-ios-gray,.ion-ios-gray,.ion-md-gray {
+  @include ion-icon-content(url(../assets/icon/gray.svg));
+}
+.ion-ios-littlegreen,.ion-ios-littlegreen,.ion-md-littlegreen {
+  @include ion-icon-content(url(../assets/icon/littlegreen.svg));
+}
+.ion-ios-moregreen,.ion-ios-moregreen,.ion-md-moregreen {
+  @include ion-icon-content(url(../assets/icon/moregreen.svg));
+}
+.ion-ios-notice,.ion-ios-notice,.ion-md-notice {
+  @include ion-icon-content(url(../assets/icon/notice.svg));
+}
+.ion-ios-orange,.ion-ios-orange,.ion-md-orange {
+  @include ion-icon-content(url(../assets/icon/orange.svg));
+}
+
+
+.fire-text-gradient{
+  background: linear-gradient(#EB6100, #EF9D1F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main-text-gradient{
+  background: linear-gradient(to right,rgba(144,195,31,.4),rgba(144,195,31,1));
+  color:#fff;
+}

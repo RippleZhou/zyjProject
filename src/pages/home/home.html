@@ -1,0 +1,79 @@
+<ion-content style="background-color: #EFEFF4">
+
+  <ion-slides pager autoplay="5000" class="banner" loop>
+
+    <ion-slide>
+      <img src="./assets/images/banner1.jpg" alt="">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/images/cyd.jpg" alt="">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/images/hyd.jpg" alt="">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid text-center class="main-menu">
+    <ion-row>
+      <ion-col
+        col-3
+        (click)='onMidNavClick(v)'
+        *ngFor="let v of midNavs">
+        <img src="{{v.image || './assets/mid-nav/'+v.name+'.svg'}}" alt="">
+        <div>{{v.name}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <div class="title">
+    <div padding-vertical class="awesome-title">
+      <div ion-text color="main-a-40">APARTMENT</div>
+      <div ion-text color="txt-primary">精品公寓</div>
+      <div></div>
+    </div>
+
+    <ion-card class="apartments"
+              *ngFor="let v of apartments;"
+              (click)="gotoApartmentDetail(v)"
+    >
+      <img src="{{v.thumb}}"/>
+      <ion-card-content no-padding>
+        <ion-card-title no-margin>
+          <ion-row>
+            <ion-col no-padding text-nowrap
+                     class="city">{{v.cityName}} {{v.name}}
+            </ion-col>
+            <ion-col no-padding text-right
+                     class="fire-text-gradient price"
+            >&yen;<span
+              class="fire-text-gradient"
+            >{{v.minPrice || 1000}}</span>起/月
+            </ion-col>
+          </ion-row>
+        </ion-card-title>
+        <div class="brief" ion-text color="txt-secondary">
+          {{v.brief}}
+        </div>
+        <ion-row>
+          <ion-col ion-text color="txt-tertiary" class="address">
+            <ion-icon name="location" ion-text no-margin no-padding></ion-icon>
+            {{v.address}}
+          </ion-col>
+          <ion-col no-padding justify-content-end col-auto>
+            <button
+              no-margin
+              ion-button outline color="main" (click)="gotoReservation(v); $event.stopPropagation()">
+              预约看房
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>
+
+

@@ -1,0 +1,22 @@
+
+<ion-content no-padding class="fast-maintain">
+  <ion-row class="title">
+    <ion-col col-4>我要维修</ion-col>
+    <ion-col>
+      <ion-input  no-margin [(ngModel)]="data.name" type="text" placeholder="请输入维修内容"></ion-input>
+    </ion-col>
+  </ion-row>
+  <div class="textarea-warp">
+    <textarea placeholder="说一说具体的求助信息，清楚明确的描述容易获得帮助"></textarea>
+  </div>
+  <div class="file-warp" >
+    <input type="file">
+    <div class="file-inner">
+      <p no-margin><ion-icon name="add-pic"></ion-icon></p>
+      <p>若无法用语言描述清楚，点击此处上传图片</p>
+    </div>
+  </div>
+  <button full-width ion-button no-margin class="submit-btn" (click)="submit()">
+    提交
+  </button>
+</ion-content>

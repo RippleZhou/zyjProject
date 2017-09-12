@@ -1,0 +1,39 @@
+page-repeal-room-confirm {
+  .repeal-room{
+    background-color: rgba(0,0,0,.5);
+    .msg-confirm{
+      width: 325px;
+      min-height: 255px;
+      background-color: white;
+      position: absolute;
+      left: calc((100% - 325px)/2);
+      top: calc((100% - 255px)/2);
+      p{
+        text-align: center;
+        color:#333;
+        font-size: 1.5rem;
+      }
+      ion-icon{
+        height: 70px;
+        width: 70px;
+      }
+      .yes-btn{
+        width: 100px;
+        height: 40px;
+        border-radius: 0;
+        margin-top:20px;
+      }
+      .no-btn{
+        width: 100px;
+        height: 40px;
+        border-radius: 0;
+        margin-top:20px;
+        background: linear-gradient(to right,rgba(144,195,31,.4),rgba(144,195,31,1));
+        color:#fff;
+        border:0;
+        //position: absolute;
+        //right:10px;
+      }
+    }
+  }
+}

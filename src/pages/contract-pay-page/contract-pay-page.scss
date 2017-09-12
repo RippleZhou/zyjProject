@@ -1,0 +1,172 @@
+page-contract-pay-page {
+.contract-pay{
+  font-size:1.75rem;
+  background-color: #efeff4;
+  .pay-way{
+    min-height: 44px;
+    line-height: 44px;
+    background-color: #fff;
+    margin-top:10px;
+    font-size:1.625rem;
+    padding:0px 2px 0 10px;
+    border-bottom:0.55px solid #f4f4f4;
+    button{
+      height: 30px;
+      width: 70px;
+      font-size:1.25rem;
+      border-radius: 0px;
+      margin:0;
+      paddind:0;
+    }
+    .one{
+      margin-right:10px;
+    }
+
+  }
+  .rent-date{
+    min-height:44px;
+    line-height:44px;
+    padding:0px 2px 0px 10px;
+    background-color: #fff;
+    border-bottom:0.55px solid #f4f4f4;
+    font-size:1.625rem;
+    button{
+      height: 30px;
+      width: 45px;
+      font-size:1.25rem;
+      border-radius: 0px;
+      margin-right:5px;
+      paddind:0;
+    }
+  .last{
+    margin:0px;
+  }
+  }
+  .start-date{
+    min-height: 44px;
+    line-height:44px;
+    background-color: #fff;
+    padding:0px 2px 0 10px;
+    border-bottom:0.55px solid #f4f4f4;
+    margin-bottom:10px;
+    font-size:1.625rem;
+    .start{
+      padding-left: 3px;
+    }
+  }
+  .live{
+    height: 44px;
+    line-height:44px;
+    padding:0px 2px 0px 10px;
+    background-color: #fff;
+    border-bottom:0.55px solid #f4f4f4;
+    font-size:1.625rem;
+  }
+  .add-live{
+    ion-row{
+      padding: 0 30px;
+      height: 44px;
+      width: 100%;
+      background-color: #fff;
+      border-bottom: 0.55px solid #EFEFF4;
+    }
+    ion-col{
+      line-height:44px;
+    }
+  }
+  .live-people{
+    height:44px;
+    line-height:44px;
+    padding: 0 30px;
+    background-color: #fff;
+    .idNum{
+      color:#888;
+    }
+  }
+  .pay{
+    position:fixed;
+    bottom: 10px;
+    height: 50px;
+    width: 100%;
+    border-top: 0.55px solid #EFEFF4;
+    .money{
+      height: 50px;
+      background-color: #fff;
+      border-left:3px solid #90c31f;
+      padding-right: 5px !important;
+      p{
+        margin:2px 0;
+        color:#ef7777;
+        font-size:1.1rem;
+        span{
+          font-size:1.75rem;
+        }
+      }
+      .save{
+        color:#ef7777;
+        font-size:1.1rem;
+        font-weight: 200;
+      }
+
+    }
+    .payoff{
+      line-height: 50px;
+      color:#fff;
+      font-size:1.875rem;
+      background: linear-gradient(to right,rgba(144,195,31,.4),rgba(144,195,31,1));
+    }
+  }
+  .detailed-account{
+    height: 40px;
+    width: 40px;
+    position:relative;
+    bottom: -20px;
+  }
+  .cost-detail-wrapper{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .25s ease-out;
+
+    &.show{
+      max-height: 450px;
+      transition: max-height .5s ease-in;
+    }
+  }
+  .pay-list{
+
+    ion-icon{
+      position:relative;
+      top: 22px;
+      left:0px;
+    }
+    .title{
+      height: 44px;
+      line-height:44px;
+      font-size:1.875rem;
+      padding:0 44px;
+      color:#333;
+      background-color: #fff;
+      border-bottom: 0.55px solid #EFEFF4;
+    }
+    .cost-t{
+      padding:0 80px;
+      background-color: #fff;
+      border-bottom: 0.55px solid #EFEFF4;
+      .cost{
+        height: 44px;
+        line-height: 44px;
+        background-color: #fff;
+        color:#888;
+        font-size:1.5rem;
+      }
+    }
+
+  }
+  .item-ios.item-block .item-inner{
+    border-bottom: none;
+  }
+  .label-ios{
+    margin:0;
+  }
+}
+}

@@ -1,0 +1,43 @@
+
+<ion-content no-padding class="rent-order">
+  <ion-grid no-padding class="input-group">
+    <ion-row class="rent-date">
+      <ion-col col-3>租期</ion-col>
+      <ion-col col-9>
+        <button *ngFor="let v of monthItems"
+                (click)="data.rentDate=v.value"
+                text-center ion-button [color]="data.rentDate===v.value?'main':'txt-tertiary'" outline
+                item-right>{{v.name}}
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-3>房间号</ion-col>
+      <ion-col ino-text text-right>
+        <ion-select [(ngModel)]="data.layoutId" placeholder="请选择房间号">
+          <ion-option
+            *ngFor="let v of layoutList"
+            [value]="v.id">{{v.name}}</ion-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="pay-list" no-padding>
+    <ion-icon name="detailed-account" class="detailed-account"></ion-icon>
+    <ion-row class="title">订单详情</ion-row>
+    <ion-row *ngFor="let v of moneyItems" class="cost-t">
+      <ion-col  class="cost">{{v.name}}</ion-col>
+      <ion-col  class="cost">{{v.item}}</ion-col>
+    </ion-row>
+    <ion-row class="pay">
+      <ion-col col-9 class="money" text-right>
+        <p>&yen;<span>100.00</span>元</p>
+      </ion-col>
+      <ion-col col-3 text-center class="payoff" (click)=gotoCheckstand()>
+        支付
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

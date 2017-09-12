@@ -1,0 +1,62 @@
+
+<ion-content no-padding class="my-rent-huose">
+<ion-grid no-padding
+          *ngFor="let v of ContractList;"
+          (click)="gotoRentingDetail(v) "
+>
+  <div class="background-div" [ngClass]="roomStyle(v,'warp')">
+    <ion-row>
+      <ion-col col-8>
+        {{v.uuid}}</ion-col>
+      <ion-col col-4 ion-text text-right> {{v.statusName}}</ion-col>
+    </ion-row>
+  </div>
+  <div class="detail-div">
+    <!--<ion-icon name="gray" no-padding no-margin></ion-icon>-->
+    <ion-icon [name]="(v.status == 2 ||v.status==4 ||v.status==8)?'littlegreen':'gray' "
+              class="right-point" no-padding no-margin></ion-icon>
+    <ion-icon [name]= "(v.status == 2 ||v.status==4 ||v.status==8)?'moregreen':'gray' "
+    class="left-point" no-padding no-margin></ion-icon>
+    <div class="out-circle" [ngClass]="roomStyle(v,'out-circle')">
+      <div class="inner-circle">
+        <div class="data-div">
+            <span class="day">还剩</span><br/>
+            <span class="day-number" [ngClass]="roomStyle(v,'dateColor')">
+              {{v.remainingDays}}</span><br/>
+            <span class="day">天</span>
+        </div>
+      </div>
+    </div>
+    <div class="detail-msg">
+      <ion-row>
+        <ion-col col-6>合同期限</ion-col>
+        <ion-col col-6 ion-text text-right>{{v.leaseName}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>押金</ion-col>
+        <ion-col col-6 ion-text text-right>&yen;{{v.deposit}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>租金</ion-col>
+        <ion-col col-6 ion-text text-right>&yen;{{v.rental}}</ion-col>
+      </ion-row>
+      <p text-right no-margin>
+        <button
+          *ngIf= "v.status == 2 ? true : false"
+          no-margin
+          ion-button outline  (click)="goCheckstand(v); $event.stopPropagation()">
+          去支付
+        </button>
+        <button
+          *ngIf= "v.status == 8 ? true : false"
+          no-margin
+          ion-button outline  (click)="gotoPayRent(v); $event.stopPropagation()">
+          交房租
+        </button>
+
+      </p>
+
+    </div>
+  </div>
+</ion-grid>
+</ion-content>

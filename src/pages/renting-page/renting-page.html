@@ -1,0 +1,96 @@
+<ion-content no-padding class="renting">
+  <ion-grid no-margin no-padding>
+    <ion-row class="top-select">
+      <ion-col col-5 text-center>
+        <ion-select [ngModel]="apartmentId"
+                    (ngModelChange)="onApartmentIdChange($event)"
+                    [selectOptions]="{title:'请选择公寓'}">
+          <ion-option
+            *ngFor="let v of apartmentList"
+            [value]="v.id">{{v.name}}
+          </ion-option>
+        </ion-select>
+      </ion-col>
+      <ion-col col-3 text-center>
+        <ion-select [selectOptions]="{title:'请选择楼栋'}"
+                    placehoder="请选择楼栋"
+                    [ngModel]="buildingId"
+                    (ngModelChange)="buildingId = $event;onFloorParamChange()">
+          <ion-option *ngFor="let v of buildingList "
+                      value="{{v.id}}">
+            {{v.name}}
+          </ion-option>
+        </ion-select>
+      </ion-col>
+      <ion-col col-4 text-center>
+        <ion-select [selectOptions]="{title:'请选择房型'}"
+                    placehoder="请选择房型"
+                    [ngModel]="layoutId"
+                    (ngModelChange)="layoutId = $event">
+          <ion-option value="-1">全选
+          </ion-option>
+          <ion-option *ngFor="let v of layoutList"
+                      value="{{v.id}}">
+            {{v.name}}
+          </ion-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row class="floor">
+      <ion-col *ngFor="let v of floorList">
+        <button ion-button
+                [color]="floorId === v.id?'main':'text-primary'"
+                (click)="floorId = v.id; onFloorParamChange()"
+                no-margin>{{v.name}}
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="status">
+      <ion-col  class="status-color">
+        <div></div>
+        可租
+        <div></div>
+        已租
+        <div></div>
+        维修
+        <div></div>
+        已选
+      </ion-col>
+    </ion-row>
+    <ion-row class="pic-status">
+      <ion-scroll scrollX="true" scrollY="true" zoom="true" style="width: 100%;height: 100%">
+        <div style="position: relative;width: 960px">
+          <img style="position: absolute;top: 0;left: 0; max-width: inherit;width: 960px" src="{{floorInfo.thumb}}"
+               alt="">
+          <div *ngFor="let v of houseList"
+               class="house"
+               (click)="v.status === 1?houseId = v.id:0"
+               [ngClass]="[v.layoutId == layoutId?'selected-layout':'',{'1':'rentable','2':'rented','3':'unavailable','4':'reparing','8':'rented'}[''+v.status],houseId == v.id?'selected':'']"
+               style="position: absolute"
+               [ngStyle]="{'width.px':v.width,'height.px': v.height,'top.px': v.top,'left.px':v.left}">
+            {{v.houseNo}}
+          </div>
+        </div>
+      </ion-scroll>
+
+    </ion-row>
+    <ion-grid no-pdding class="room" *ngIf="houseInfo">
+      <ion-row >
+        <ion-col class="room-num">{{houseInfo.houseNo}}</ion-col>
+        <ion-col col-6 class="price fire-text-gradient" text-right >
+          &yen;<span
+          class="fire-text-gradient">{{houseInfo.salePrice}}</span>/月
+        </ion-col>
+      </ion-row>
+      <ion-row class="room-detail">
+        <ion-col  col-6>
+          <span>{{houseInfo.layoutName}}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+          <span>{{houseInfo.area}}㎡</span>&nbsp;&nbsp;&nbsp;&nbsp;
+          <span>{{houseInfo.orientationsName}}</span>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+    <button class="btn" ion-button full no-margin (click)=gotoContractPay()>立即签约</button>
+  </ion-grid>
+</ion-content>

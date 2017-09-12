@@ -1,0 +1,219 @@
+page-my-renting-house {
+.my-rent-huose{
+  background-color: #EFEFF4;
+  margin-bottom: 20px;
+  .background-div{
+    color:#fff;
+    width: 100%;
+    height: 90px;
+    font-size:2.25rem;
+    margin-top:10px;
+    ion-grid{
+      position:relative;
+    }
+    ion-row{
+      padding:0 10px;
+      height: 45px;
+      line-height: 45px;
+      ion-icon{
+        width: 20px;
+        height:20px;
+      }
+    }
+  }
+  .detail-div{
+    height: 184px;
+    width:100%;
+    position:relative;
+    top:-35px;
+    border-radius: 10px;
+    background-color: #fff;
+    .right-point{
+      position: absolute;
+      right: 4%;
+      top: -4%;
+      height: 28px;
+      width: 28px;
+    }
+    .left-point{
+      position: absolute;
+      left: 4%;
+      top: -4%;
+      height: 28px;
+      width: 28px;
+    }
+    .out-circle{
+      height: 138px;
+      width: 138px;
+      border-radius: 50%;
+      //background: linear-gradient(#EB6100, #EF9D1F);
+      position:relative;
+      top:23px;
+      left:20px;
+      .inner-circle{
+        height: 125px;
+        width: 125px;
+        border-radius: 50%;
+        background-color: #fff;
+        position:relative;
+        top:6px;
+        left:6px;
+        .data-div{
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          box-shadow: 0 0 5px 5px rgba(136,136,136,.1);
+          position:relative;
+          top:22px;
+          left:22px;
+          text-align: center;
+          padding:10px 0;
+          span{
+            display: inline-block;
+          }
+          .day{
+            font-size:1.5rem;
+            color:#b2b2b2;
+          }
+          .day-number{
+            font-size:2.25rem;
+          }
+        }
+      }
+    }
+    .detail-msg{
+      height: 144px;
+      width: 190px;
+      position:absolute;
+      top:20px;
+      right:10px;
+      padding:0 10px;
+      font-size:1.5rem;
+      color:#888;
+      ion-row{
+        margin:5px 0;
+      }
+      button{
+        width: 75px;
+        height: 30px;
+        border-radius: 0;
+        margin-top:5px;
+        background: linear-gradient(to right,rgba(144,195,31,.4),rgba(144,195,31,1));
+        color:#fff;
+        border:0;
+      }
+      ion-icon{
+        height: 80px;
+        width: 95px;
+        position: relative;
+        top: -40px;
+        right: -70px;
+      }
+    }
+  }
+  .expire{
+    .background-div{
+      background: #b2b2b2;
+      color:#fff;
+      width: 100%;
+      height: 90px;
+      font-size:2.25rem;
+      margin-top:10px;
+      ion-row{
+        padding:0 10px;
+        height: 45px;
+        line-height: 45px;
+      }
+    }
+    .detail-div{
+      height: 184px;
+      width: 355px;
+      position:relative;
+      top:-45px;
+      left:10px;
+      border-radius: 10px;
+      background-color: #fff;
+      .out-circle{
+        height: 138px;
+        width: 138px;
+        border-radius: 50%;
+        //background: #b2b2b2;
+        position:relative;
+        top:23px;
+        left:20px;
+        .inner-circle{
+          height: 125px;
+          width: 125px;
+          border-radius: 50%;
+          background-color: #fff;
+          position:relative;
+          top:6px;
+          left:6px;
+          .data-div{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 5px rgba(136,136,136,.1);
+            position:relative;
+            top:22px;
+            left:22px;
+            text-align: center;
+            padding:10px 0;
+            span{
+              display: inline-block;
+            }
+            .day{
+              font-size:1.5rem;
+
+            }
+            .day-number{
+              font-size:2.25rem;
+              color:#b2b2b2;
+            }
+          }
+        }
+      }
+      .detail-msg{
+        height: 144px;
+        width: 190px;
+        position:absolute;
+        top:20px;
+        right:10px;
+        padding:0 10px;
+        font-size:1.5rem;
+        color:#888;
+        ion-row{
+          margin:5px 0;
+        }
+        ion-icon{
+          height: 80px;
+          width: 95px;
+          position: relative;
+          top: -40px;
+          right: -70px;
+        }
+      }
+    }
+  }
+  .sign{
+    background: linear-gradient(to right,rgba(144,195,31,1),rgba(144,195,31,.4));
+  }
+  .no-sign{
+    background: #b2b2b2;
+  }
+  .red-circle{
+    background: linear-gradient(#EB6100, #EF9D1F);
+  }
+  .gray-circle{
+    background: #b2b2b2;
+  }
+  .red-date{
+    background: linear-gradient(#EB6100, #EF9D1F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gray-date{
+    color:#b2b2b2;
+  }
+}
+}

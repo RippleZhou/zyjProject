@@ -1,0 +1,30 @@
+page-reservation-confirm {
+.reservation-confirm{
+  background-color: rgba(0,0,0,.5);
+  .msg-confirm{
+    width: 225px;height: 175px;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    left: calc((100% - 225px)/2);
+    top: calc((100% - 175px)/2);
+  }
+  .pic{
+    margin-top: -24px;
+    img{
+      width: 48px;
+    }
+  }
+  .info{
+    font-size: 1.625rem;
+  }
+  button{
+    border-radius: 0;
+    width: 100%;
+    height: 30px;
+    font-size:1.625rem;
+    margin-top:20px;
+  }
+
+}
+}

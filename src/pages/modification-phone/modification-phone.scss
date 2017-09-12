@@ -1,0 +1,52 @@
+page-modification-phone {
+  .modification{
+    background-color: #EFEFF4;
+    text-align: center;
+    ion-row{
+      padding:0 10px;
+      background-color: #fff;
+      input{
+        height: 44px;
+        margin:0;
+      }
+      p{
+        width: 100%;
+        margin-top:15px;
+      }
+    }
+    .login-phone{
+      border-bottom: 0.55px solid #EFEFF4;
+      margin-top:10px;
+    }
+    .small-icon{
+      width: 18px;
+      height: 18px;
+      margin:12px 0;
+    }
+    .verification{
+      line-height:40px;
+      .verification-code{
+        min-width:100px;
+        border-radius: 0;
+        font-size:1.5rem;
+      }
+    }
+
+    .login-verifycode{
+      border-bottom: 0.55px solid #EFEFF4;
+      .trouble{
+        line-height: 44px;
+        padding-right:10px;
+        color:#b2b2b2;
+      }
+    }
+    .text-invalid{
+      color: red;
+    }
+
+    .newphone{
+      margin-bottom: 20px;
+    }
+
+  }
+}

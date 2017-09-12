@@ -1,0 +1,38 @@
+page-my-order {
+.my-order{
+  background-color: #EFEFF4;
+  .order{
+    padding:0px;
+    background-color: #fff;
+    margin-bottom: 10px;
+  }
+  ion-row{
+    height: 44px;
+    line-height:44px;
+    margin:0 10px;
+    border-bottom: 0.55px solid #EFEFF4;
+
+  }
+  ion-col{
+    padding:0;
+  }
+  .order-msg{
+    margin-top:10px;
+    font-size:1.5rem;
+    height: 66px;
+    line-height:66px;
+    .shop{
+      font-size:1.875rem;
+    }
+  }
+  .date{
+    font-size:1.5rem;
+    .order-time{
+      padding-bottom: 10px;
+    }
+  }
+  .not{
+    color:#EA6000;
+  }
+}
+}

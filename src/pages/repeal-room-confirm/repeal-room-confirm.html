@@ -1,0 +1,22 @@
+<ion-content no-padding class="repeal-room">
+  <ion-grid class="msg-confirm" >
+    <p><ion-icon name="notice"></ion-icon></p>
+    <p>确定要退房吗?</p>
+    <ion-row>
+      <ion-col col-6 text-center>
+        <button class="yes-btn"
+        no-margin color="main"
+        ion-button outline (click)="apply(); $event.stopPropagation()">
+        就要退
+      </button>
+      </ion-col>
+      <ion-col col-6 text-center>
+        <button class="no-btn"
+          no-margin outline
+          ion-button outline (click)="dismiss()">
+          我不退了
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

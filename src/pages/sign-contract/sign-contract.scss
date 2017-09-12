@@ -1,0 +1,92 @@
+page-sign-contract {
+.sign-contract{
+  ion-slides{
+    height:auto;
+  }
+  .contract-one{
+    padding:10px;
+    font-size: 1.375rem;
+  }
+  .contract{
+    paading:0 10px;
+    h3{
+      font-size:2.25rem;
+      margin:10px 0;
+      width:100%;
+    }
+    img{
+      padding:0 10px;
+    }
+  }
+  .sign{
+    height: 44px;
+    line-height: 44px;
+    font-size:1.625rem;
+    padding:0 10px;
+  }
+  .sign-area{
+    height: 155px;
+    width: 305px;
+    border:0.55px solid #9a9a9a;
+    background-color: #EFEFF4;
+    margin:0 5px 80px 60px;
+  }
+  .detailed-account{
+    height: 40px;
+    width: 40px;
+    position:relative;
+    bottom:85px;
+  }
+  .go-pay{
+    position:relative;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    z-index:3;
+    .money{
+      height: 50px;
+      background-color: #fff;
+      border-left:3px solid #90c31f;
+      padding-right: 5px !important;
+      p{
+        margin:5px 0;
+        color:#ef7777;
+        font-size:1.1rem;
+        text-align: right;
+        span{
+          font-size:1.625rem;
+        }
+      }
+      .save{
+        color:#ef7777;
+        font-size:1.1rem;
+        font-weight: 200;
+        margin:2px 0;
+      }
+
+    }
+    .payoff{
+      line-height: 50px;
+      color:#fff;
+      font-size:1.875rem;
+      background: linear-gradient(to right,rgba(144,195,31,.4),rgba(144,195,31,1));
+    }
+  }
+  .importance{
+    color:red;
+  }
+  .main{
+    color:#90c31f;
+  }
+  .title{
+    font-weight: bold;
+  }
+  input{
+    vertical-align: middle;
+  }
+  p{
+    text-align: left;
+    margin:5px 0;
+  }
+}
+}

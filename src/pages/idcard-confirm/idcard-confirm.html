@@ -1,0 +1,29 @@
+<ion-content class="idcard-confirm">
+  <ion-grid class="msg-confirm">
+    <ion-row>
+      <ion-col text-center class="pic">
+        <img src="./assets/icon/smile.svg" alt="">
+      </ion-col>
+    </ion-row>
+    <ion-row ion-text text-center justify-content-center class="info">
+      签约前请登记您的真实信息
+    </ion-row>
+    <ion-row class="msg">
+      <ion-col col-4>姓名</ion-col>
+      <ion-col >
+        <ion-input type="text" [(ngModel)]="data.name" placeholder="请输入姓名"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row class="msg">
+      <ion-col col-4>身份证号</ion-col>
+      <ion-col >
+        <ion-input type="text" [(ngModel)]="data.idcard" placeholder="请输入身份证号"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col ion-text text-right offset-1>
+        <button (click)="dismiss()" ion-button>去签约</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,40 @@
+
+<ion-content no-padding>
+  <ion-slides pager autoplay="5000" loop class="banner" >
+
+    <ion-slide>
+      <img src="./assets/images/banner1.jpg" alt="">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/images/cyd.jpg" alt="">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/images/hyd.jpg" alt="">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid text-center class="commodity-menu" no-padding>
+    <ion-row>
+      <ion-col
+        class="commoditys"
+        col-6
+        *ngFor="let v of commoditys">
+
+        <ion-grid class="goods" (click)=" CleanDetail()" >
+          <ion-row><img src="{{v.image}}" alt=""></ion-row>
+          <ion-row justify-content-between class="goods-msg" >
+            <ion-col no-padding text-left col-8 class="name"
+            >{{v.name}}</ion-col>
+            <ion-col no-padding text-right
+                     class="fire-text-gradient price">&yen;<span class="fire-text-gradient "
+            >{{v.price}}</span></ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

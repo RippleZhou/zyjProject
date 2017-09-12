@@ -1,0 +1,41 @@
+page-life-cleanning-page {
+  .banner{
+    height: 175px;
+    .swiper-pagination{
+      text-align: right;
+    }
+  }
+
+  .commodity-menu{
+    font-size:1rem;
+    ion-col:nth-child(2n-1) {
+      border-left:none;
+    }
+    .commoditys{
+      border-bottom: 1px solid #EFEFF4;
+      border-left: 1px solid #EFEFF4;
+      img{
+        width: 168px;
+        height: 110px;
+      }
+      .goods{
+        padding:10px;
+        .goods-msg{
+          padding-top:10px;
+          line-height:20px;
+          .name{
+            font-size: 1.25rem;
+          }
+          .price{
+            font-size:1.1rem;
+            font-weight: normal;
+            span{
+              font-size:1.5rem;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

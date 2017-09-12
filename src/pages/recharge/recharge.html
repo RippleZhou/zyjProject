@@ -1,0 +1,36 @@
+
+<ion-content no-padding class="recharge">
+<ion-grid no-padding>
+  <ion-row class="recharge-money">
+    <ion-col col-6 ion-text text-left>充值金额</ion-col>
+    <ion-col col-6 ion-text text-right color="txt-tertiary" class="entering">请输入50的倍数</ion-col>
+  </ion-row>
+  <ion-row class="recharge-btn">
+      <button *ngFor="let v of moneyItems"
+              (click)="data.money=v.value"
+              text-center ion-button [color]="data.money===v.value?'main':'txt-tertiary'" outline item-right>
+        {{v.name}}
+      </button>
+  </ion-row>
+  <ion-row class="dark">支付方式</ion-row>
+  <ion-row class="wechat" >
+    <ion-col col-6 text-left>
+      <ion-icon name="wechat" no-margin no-padding></ion-icon>
+      微信支付
+    </ion-col>
+    <ion-col col-6 text-right>
+      <ion-icon name="check-on" no-margin no-padding></ion-icon>
+    </ion-col>
+  </ion-row>
+  <ion-row class="zfb">
+    <ion-col col-6 text-left>
+      <ion-icon name="zfb" no-margin no-padding></ion-icon>
+      支付宝
+    </ion-col>
+    <ion-col col-6 text-right>
+      <ion-icon name="check" no-margin no-padding></ion-icon>
+    </ion-col>
+  </ion-row>
+  <button ion-button full color="main-a-40" (click)="gotoPaySucceed()" class="submint-btn">确认</button>
+</ion-grid>
+</ion-content>

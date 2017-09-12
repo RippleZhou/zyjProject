@@ -1,0 +1,18 @@
+page-live-people {
+  .live-people{
+    background-color: #EFEFF4;
+    ion-row{
+      padding: 0 10px;
+      height: 44px;
+      width: 100%;
+      background-color: #fff;
+      border-bottom: 0.55px solid #EFEFF4;
+    }
+    ion-col{
+      line-height:44px;
+    }
+    .name{
+      margin-top:10px;
+    }
+  }
+}

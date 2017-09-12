@@ -1,0 +1,47 @@
+
+
+<ion-content no-padding class="rent-store">
+
+  <!--<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>-->
+  <ion-slides pager autoplay="5000" loop class="banner">
+
+    <ion-slide>
+      <img src="./assets/images/banner1.jpg" alt="">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/images/cyd.jpg" alt="">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/images/hyd.jpg" alt="">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid text-center class="commodity-menu" no-padding>
+    <ion-row>
+      <ion-col
+        class="commoditys"
+        col-6
+        (click)='gotoRentStoreDetail(v)'
+        *ngFor="let v of commoditys">
+
+        <ion-grid class="goods">
+          <ion-row><img src="{{v.image}}" alt=""></ion-row>
+          <ion-row justify-content-between class="goods-msg">
+            <ion-col no-padding text-left>{{v.name}}</ion-col>
+            <ion-col no-padding text-right
+                     class="fire-text-gradient price"
+            >&yen;<span
+              class="fire-text-gradient"
+            >{{v.price}}</span>/月</ion-col>
+          </ion-row>
+        </ion-grid>
+
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

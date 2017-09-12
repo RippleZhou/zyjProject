@@ -1,0 +1,76 @@
+page-integral-store-order {
+  .integral-order {
+    background-color: #EFEFF4;
+    .input-group {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      background-color: #fff;
+      > ion-row {
+        height:44px;
+        padding:0 5px;
+        ion-col {
+          display: flex;
+          align-items: center;
+          input {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .pay-list{
+      position:fixed;
+      bottom: 10px;
+      ion-icon{
+        position:relative;
+        top: 22px;
+        left:0px;
+        height: 40px;
+        width: 40px;
+      }
+      .title{
+        height: 44px;
+        line-height:44px;
+        font-size:1.875rem;
+        padding:0 44px;
+        color:#333;
+        background-color: #fff;
+        border-bottom: 0.55px solid #EFEFF4;
+      }
+      .cost-t{
+        padding:0 80px;
+        background-color: #fff;
+        border-bottom: 0.55px solid #EFEFF4;
+        .cost{
+          height: 44px;
+          line-height: 44px;
+          background-color: #fff;
+          color:#888;
+          font-size:1.5rem;
+        }
+      }
+      .pay{
+        background-color: #90c31f;
+        height: 50px;
+        width: 100%;
+        border-top: 0.55px solid #EFEFF4;
+        .money{
+          height: 50px;
+          background-color: #fff;
+          border-left:3px solid #90c31f;
+          padding-right: 5px !important;
+          p{
+            color:#ef7777;
+            font-size:1.75rem;
+          }
+        }
+        .payoff{
+          line-height: 50px;
+          color:#fff;
+          font-size:1.875rem;
+        }
+      }
+
+    }
+  }
+}

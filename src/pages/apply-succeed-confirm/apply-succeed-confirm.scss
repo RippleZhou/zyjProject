@@ -1,0 +1,34 @@
+page-apply-succeed-confirm {
+  .apply-succeed-confirm{
+    background-color: rgba(0,0,0,.5);
+    .msg-confirm{
+      width: 225px;
+      height: 220px;
+      border-radius: 10px;
+      background-color: white;
+      position: absolute;
+      left: calc((100% - 225px)/2);
+      top: calc((100% - 220px)/2);
+    }
+    .pic{
+      margin-top: -24px;
+      img{
+        width: 48px;
+      }
+    }
+    .info{
+      font-size: 1.875rem;
+      margin:30px auto;
+    }
+    button{
+      border-radius: 0;
+      width: 140px;
+      height: 40px;
+      font-size:1.625rem;
+      background: linear-gradient(to right,rgba(144,195,31,.4),rgba(144,195,31,1));
+      color:#fff;
+      margin:0 auto;
+    }
+
+  }
+}

@@ -1,0 +1,36 @@
+
+<ion-content no-padding class="clean-detail">
+  <ion-slides pager autoplay="5000" loop class="banner">
+
+    <ion-slide>
+      <img src="./assets/images/banner1.jpg" alt="">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/images/cyd.jpg" alt="">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/images/hyd.jpg" alt="">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid class="goods-msg" no-padding
+            *ngFor="let v of goods;">
+
+    <ion-row class="goods-title">
+      <ion-col col-6 text-left>{{v.name}}</ion-col>
+      <ion-col col-6 text-right class="price fire-text-gradient">&yen;<span>{{v.price}}</span>/月</ion-col>
+    </ion-row>
+    <ion-row class="rent-inform" text-left>租赁须知</ion-row>
+    <ion-row class="inform">
+      <p>{{(v.info).one}}</p>
+      <p>{{(v.info).two}}</p>
+      <p>{{(v.info).three}}</p>
+      <p>{{(v.info).four}}</p>
+      <p>{{(v.info).five}}</p>
+    </ion-row>
+
+    <button class="btn" ion-button full (click)="gotoCleanOrder()">立即租赁</button>
+  </ion-grid>
+</ion-content>

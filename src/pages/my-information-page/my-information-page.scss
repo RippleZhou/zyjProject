@@ -1,0 +1,47 @@
+page-my-information-page {
+.my-information{
+  background-color: #EFEFF4;
+
+  ion-row{
+    padding: 0 10px;
+    background-color: #fff;
+    font-size:1.625rem;
+    color:#333;
+    height: 44px;
+    line-height:44px;
+  }
+
+  .disabled{
+    color:#b2b2b2;
+  }
+
+  .info{
+    .pic{
+      height: 75px;
+      width: 100%;
+      line-height: 75px;
+      margin-top:10px;
+      margin-bottom: 5px;
+
+      img{
+        padding-top:6px;
+        width: 70px;
+        height: 70px;
+      }
+    }
+    .border-b{
+      border-bottom: 0.55px solid #EFEFF4;
+    }
+    .tel{
+      margin-top:5px;
+      span{
+        color:#90c31f;
+      }
+    }
+  }
+
+  .id-card-img{
+    height: 110px;
+  }
+}
+}

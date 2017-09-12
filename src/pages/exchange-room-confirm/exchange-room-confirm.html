@@ -1,0 +1,46 @@
+
+<ion-content no-padding class="exchange-room">
+  <ion-grid class="msg-confirm">
+    <ion-row  class="top">
+      <ion-icon name="half-apple"></ion-icon>
+      <ion-col ion-text text-left class="title" (click)="dismiss()">
+        申请换房
+      </ion-col>
+    </ion-row>
+    <ion-row class="choose">
+      <ion-col col-4 ion-text text-left no-padding>公寓</ion-col>
+      <ion-col col-8 class="outer" no-padding>
+        <select [ngModel]="data.apartmentId"
+                (ngModelChange)="onApartmentIdChange($event)">
+          <option
+            *ngFor="let v of apartmentList"
+            [value]="v.id">{{v.name}}
+          </option>
+        </select>
+      </ion-col>
+    </ion-row>
+    <!--<ion-row class="choose">-->
+      <!--<ion-col col-4 ion-text text-left>房型</ion-col>-->
+      <!--<ion-col>-->
+        <!--<select placeholder="请选择房型"  [ngModel]="NewLayoutId"-->
+        <!--&gt;-->
+          <!--<option-->
+            <!--*ngFor="let v of buildingData"-->
+            <!--[value]="v.id">{{v.name}}-->
+          <!--</option>-->
+        <!--</select>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+    <ion-row class="choose">
+    <ion-col col-4 ion-text text-left no-padding>房间号</ion-col>
+    <ion-col col-8 class="roomNo">
+      <ion-input no-margin type="text" placeholder="请输入房间号" [ngModel]="data.HouseNo" ></ion-input>
+    </ion-col>
+  </ion-row>
+    <button
+      no-margin
+      ion-button outline (click)="apply(); $event.stopPropagation()">
+      立即申请
+    </button>
+  </ion-grid>
+</ion-content>

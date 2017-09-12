@@ -1,0 +1,89 @@
+
+<ion-content no-padding class="apartment-detail" >
+  <ion-slides pager autoplay="5000" loop >
+
+    <ion-slide>
+      <img src="./assets/images/banner1.jpg" alt="">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/images/cyd.jpg" alt="">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/images/hyd.jpg" alt="">
+    </ion-slide>
+  </ion-slides>
+
+
+  <ion-card
+    class="apartment-msg"
+    *ngIf="apartmentDetail"
+    no-margin padding full-width
+  >
+    <ion-card-content no-padding>
+      <ion-card-title>
+        <ion-row class="city">
+          <ion-col no-padding>{{apartmentDetail.cityName}} {{apartmentDetail.name}}</ion-col>
+        </ion-row>
+      </ion-card-title>
+      <div ion-text color="txt-secondary" class="desc" >
+        {{apartmentDetail.brief}}
+      </div>
+      <div ion-text color="txt-tertiary" class="loc" >
+        <ion-icon name="pin" ion-text color="main"></ion-icon>
+        {{apartmentDetail.address}}
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid
+    class="house"
+    *ngFor="let Layout of getLayoutList">
+    <ion-row class="outer" >
+      <ion-col col-auto class="pic">
+        <img  src="{{Layout.thumb}}">
+      </ion-col>
+      <ion-col>
+        <ion-grid class="inner" full-height>
+          <ion-row class="house">
+           <ion-col col-6 no-padding>{{Layout.name}}</ion-col>
+            <ion-col no-padding text-right
+                     class="fire-text-gradient price"
+            >&yen;<span
+              class="fire-text-gradient"
+            >{{Layout.minPrice}}</span>起/月</ion-col>
+          </ion-row>
+          <ion-row class="area">{{Layout.description}}</ion-row>
+          <ion-row>
+            <button no-margin (click)="gotoRentting()"
+                    class="right-btn"
+                    ion-button outline color="main">
+              租房
+            </button>
+            <button no-margin
+                    ion-button outline color="main" (click)="gotoReservation(Layout)">
+              预约看房
+            </button>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+    <ion-row no-padding  class="room-detail">
+      <ion-col no-padding>
+        <div text-center (click)="Layout.active = !Layout.active" class="detail-btn">
+          户型详情
+        </div>
+        <div
+          class="details"
+          *ngIf="Layout.active"
+          padding>
+          {{Layout.description}}
+          <img src="{{(Layout.layoutImage)}}" alt="">
+          <!--<img src="{{(home.images).two}}" alt="">-->
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,14 @@
+<!--<ion-tabs>-->
+<!--<ion-tab *ngFor="let v of tabs"-->
+<!--[root]="v.page"-->
+<!--[tabTitle]="v.title"-->
+<!--[tabIcon]="v.icon"-->
+<!--[tabUrlPath]="v.path"-->
+<!--&gt;</ion-tab>-->
+<!--</ion-tabs>-->
+<ion-tabs #mainTabs selectedIndex={{selectTabIndex}} tabsHighlight="true">
+  <ion-tab [root]="tab1Root" tabTitle="首页" tabIcon="qgy-home" ></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="活动" tabIcon="qgy-activity"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="我的" tabIcon="qgy-mine" ></ion-tab>
+</ion-tabs>
+

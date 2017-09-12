@@ -1,0 +1,63 @@
+
+
+<ion-content  style="background-color: #EFEFF4" >
+  <img src="./assets/images/txbj.jpg"/>
+  <div class="user-information">
+    <ion-avatar item-center (click)="gotologin()">
+      <img src="{{user?.portrait}}">
+    </ion-avatar>
+    <div class="card-title" no-margin>
+      <p no-margin>{{user?.username?user?.username:'--请登录--'}}</p>
+      <p class="card-subtitle">推荐码:{{user?.invitation}}</p>
+    </div>
+  </div>
+
+  <ion-grid text-center class="user-info grid" style="background-color: #ffffff" >
+    <ion-row align-items-center full-height>
+      <ion-col text-center col-6 class="moeny" (click)="gotoMyBalance()">
+        <div style="font-size: 1.5rem; color:#333;">余额</div>
+        <div class="fire-text-gradient" style="font-size:1.1rem;"
+        >&yen;
+          <span class="fire-text-gradient"
+                style="font-size:1.75rem;"
+          >{{user?.balance?user?.balance:0}}</span></div>
+      </ion-col>
+      <ion-col text-center col-6 (click)="gotoIntergralStore()">
+        <div style="font-size:1.5rem; color:#333;"
+        >积分</div>
+        <div class="fire-text-gradient" style="font-size:1.75rem;" >{{user?.score?user?.score:0}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid text-center class="main-menu grid">
+    <ion-row>
+      <ion-col
+        col-4  (click)='onMidNavClick(v)'
+        *ngFor="let v of midNavs">
+        <img src="{{v.image || './assets/user/'+v.name+'.svg'}}" alt="">
+        <div>{{v.name}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid no-padding class="bottom-tab">
+    <ion-row>
+      <ion-col col-4 ino-text text-center (click)='goHome()' >
+        <ion-icon name="qgy-home" no-margin></ion-icon>
+        <br>
+        首页
+      </ion-col>
+      <ion-col col-4  ino-text text-center (click)="goActivity(v)"
+      >
+        <ion-icon name="qgy-activity" no-margin></ion-icon>
+        <br>
+        活动
+      </ion-col>
+      <ion-col col-4  ino-text text-center >
+        <ion-icon name="qgy-mine" no-margin></ion-icon>
+        <br>
+        我的
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

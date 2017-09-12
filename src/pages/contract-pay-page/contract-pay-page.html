@@ -1,0 +1,99 @@
+
+
+<ion-content no-padding class="contract-pay">
+  <ion-grid no-padding>
+    <ion-list>
+      <ion-item class="pay-way" >
+        付款方式
+        <button class="one" text-center ion-button outline
+                *ngFor="let v of payWays"
+                (click)="hasMask(houseInfo.payType,v.value) && (!v.validCheck || v.validCheck()) && (data.payWay = v.value)" [color]="data.payWay == v.value?'main':'txt-tertiary'"
+                item-right>
+          {{v.name}}
+        </button>
+      </ion-item>
+      <ion-item class="rent-date">
+        租期
+        <button *ngFor="let v of monthItems"
+                (click)="(!v.validCheck || v.validCheck()) && (data.rentDate=v.value)"
+                text-center ion-button [color]="data.rentDate===v.value?'main':'txt-tertiary'" outline item-right>
+          {{v.name}}
+        </button>
+      </ion-item>
+      <ion-row class="start-date">
+        <ion-col col-6 text-left no-padding >起租时间</ion-col>
+        <ion-col>
+          <ion-datetime class="start"
+            text-right displayFormat="YYYY年MM月DD日" placeholder="请选择起租日期"
+                        [(ngModel)]="data.startDate"></ion-datetime>
+        </ion-col>
+      </ion-row>
+      <ion-row class="live">
+        <ion-col col-6 text-left> 居住人</ion-col>
+        <ion-col col-6 text-right>
+          <ion-icon name="add" no-margin (click)="data.active = !data.active"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <div  *ngIf="data.active" class="add-live">
+        <ion-row class="name">
+          <!--<ion-col col-1 text-right>-->
+            <!--<ion-icon name="remove" no-margin (click)="data.persons.splice(i,1)"></ion-icon>-->
+          <!--</ion-col>-->
+          <ion-col col-3 text-left>姓名</ion-col>
+          <ion-col >
+            <ion-input text-right [(ngModel)]="data.name" type="text"  no-margin
+                       placeholder="请输入姓名"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <!--<ion-col col-1 text-right>-->
+          <!--<ion-icon name="remove" no-margin (click)="data.persons.splice(i,1)"></ion-icon>-->
+          <!--</ion-col>-->
+          <ion-col col-4 text-left>身份证号</ion-col>
+          <ion-col>
+            <ion-input text-right  no-margin
+                       [(ngModel)]="data.idNum" type="text" placeholder="请输入身份证号"></ion-input>
+          </ion-col>
+        </ion-row>
+      </div>
+      <!--<ion-row class="live-people"-->
+               <!--*ngFor="let v of data.persons; index as i">-->
+        <!--<ion-col col-3 >{{v.name}}</ion-col>-->
+        <!--<ion-col col-8 class="idNum">{{v.idNum}}</ion-col>-->
+        <!--<ion-col col-1 text-right>-->
+          <!--<ion-icon name="remove" no-margin (click)="data.persons.splice(i,1)"></ion-icon>-->
+        <!--</ion-col>-->
+      <!--</ion-row>-->
+    </ion-list>
+
+    <ion-row full-width style="position: fixed; bottom: 60px;z-index: 1">
+      <ion-icon name="detailed-account"
+                (click)="showCostDetail=!showCostDetail"
+                class="detailed-account"></ion-icon>
+      <div full-width
+           class="cost-detail-wrapper"
+           [ngClass]="{show:showCostDetail}">
+        <ion-grid class="pay-list" no-padding >
+          <ion-row class="title">收费明细</ion-row>
+          <ion-row *ngFor="let v of moneyItems" class="cost-t">
+            <ion-col  class="cost">{{v.name}}</ion-col>
+            <ion-col  class="cost">&yen;{{v.money}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-row>
+
+    <ion-row class="pay">
+      <ion-col col-9 class="money" text-right>
+          <p>&yen;<span> {{totalMoney}}</span>元</p>
+          <span class="save">
+            省&yen;{{saveMoney}}元
+          </span>
+      </ion-col>
+      <ion-col col-3 text-center class="payoff" (click)=gotoSignContract()>
+        去签约
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

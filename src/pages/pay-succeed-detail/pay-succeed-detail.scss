@@ -1,0 +1,19 @@
+page-pay-succeed-detail {
+  .pay-succeed-detail{
+    background-color: #EFEFF4;
+    ion-row{
+      width: 100%;
+      height: 44px;
+      line-height: 44px;
+      background-color: #fff;
+      border-bottom: 0.55px solid #EFEFF4;
+      padding:0 10px;
+    }
+    .startdate,.order-num{
+      margin-top:10px;
+    }
+    .enddate{
+      margin-bottom:10px;
+    }
+  }
+}

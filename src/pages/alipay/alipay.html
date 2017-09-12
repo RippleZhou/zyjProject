@@ -1,0 +1,13 @@
+
+<ion-content padding class="alipay">
+  <div *ngIf="isWechat">
+    <img src="/assets/images/alipay.png" alt="">
+    <div>
+      <p>说明:</p>
+      <p>因支付宝屏蔽了来自微信内的支付请求,请使用浏览器打开页面以完成支付.在浏览器内完成支付后,请返回微信,以检测支付结果.</p>
+    </div>
+  </div>
+  <p *ngIf="!isWechat">
+    支付宝跳转中......
+  </p>
+</ion-content>

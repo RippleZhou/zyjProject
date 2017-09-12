@@ -1,0 +1,89 @@
+page-apartment-detail {
+  .apartment-detail{
+    background-color: #EFEFF4;
+    ion-slides{
+      height: 175px;
+      .swiper-pagination{
+        text-align: right;
+      }
+    }
+    .apartment-msg{
+      box-shadow: none;
+      border-bottom: 1px solid #b2b2b2;
+      padding-bottom: 25px;
+      margin-bottom: 5px;
+      .city{
+        font-size:2.25rem;
+        font-weight: bold;
+      }
+      .desc{
+        font-size:1.5rem;
+      }
+      .loc{
+        font-size: 1.375rem;
+        margin-top: 6px;
+      }
+    }
+    .house{
+      background-color: white;
+      margin-top: 5px;
+      .outer{
+        border-bottom: 1px solid #eee;
+        .pic{
+          img{
+            width: 125px;
+            height: 90px;
+          }
+        }
+        .inner{
+          justify-content: space-between;
+          position: absolute;
+          padding-bottom:12px;
+          .house{
+            font-size:1.875rem;
+          }
+           .price{
+            font-size: 1.375rem;
+            span{
+              font-size: 2.25rem;
+            }
+          }
+          .area{
+            font-size:1.625rem;
+            color:#888;
+          }
+          button{
+            border-radius: 0;
+            width:100px;
+            height: 30px;
+            font-size: 1.5rem;
+            cursor: pointer;
+          }
+          .right-btn{
+            margin-right: 10px;
+          }
+        }
+      }
+      .room-detail{
+        font-size:1.5rem;
+        .detail-btn{
+          padding: 5px 0 0 0;
+          color:#888;
+        }
+        img{
+          width: 305px;
+          height: 175px;
+          padding-bottom: 10px;
+
+        }
+        .details{
+          background-color: #fafafa;
+          text-align: center;
+        }
+      }
+
+    }
+  }
+
+
+}

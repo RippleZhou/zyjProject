@@ -1,0 +1,83 @@
+<ion-content class="reservation">
+  <ion-grid class="input-group" no-padding>
+    <ion-row>
+      <ion-col col-4>姓名</ion-col>
+      <ion-col>
+        <ion-input [(ngModel)]="data.name" type="text" placeholder="请输入姓名"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="gender">
+      <ion-col col-3>性别</ion-col>
+      <ion-col col-4>
+        <button  *ngFor="let v of genders"
+                 (click)="data.gender=v.value"
+                 text-center ion-button
+                 [color]="data.gender===v.value?'main':'txt-tertiary'"
+                 ion-button icon-left clear>
+          <ion-icon [name]="data.gender===v.value?v.icon+'-on':v.icon+'-off'"></ion-icon>
+          {{v.name}}
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>手机号</ion-col>
+      <ion-col>
+        <ion-input [(ngModel)]="data.phone"
+                   [ngClass]="{'text-invalid':data.phone && !validationService.isPhoneValid(data.phone)}"
+                   type="text" placeholder="请输入手机号"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-4>验证码</ion-col>
+      <ion-col col-4>
+        <ion-input [(ngModel)]="data.verifyCode" type="text" placeholder="请输入验证码"></ion-input>
+      </ion-col>
+      <ion-col col-4 ion-text text-right class="verification">
+        <button [disabled]="sendingVerifyCode"
+                  (click)="sendVerifyCode()"
+                  ion-button small no-margin
+                  [disabled]="data.phone.invalid||disabled"
+                  color="main-a-40" class="verification-code">
+            {{getVerTitle}}
+          </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="input-group" no-padding>
+    <ion-row>
+      <ion-col col-4>公寓</ion-col>
+      <ion-col>
+        <ion-select [(ngModel)]="apartmentId" placeholder="请选择公寓">
+          <ion-option
+            *ngFor="let v of apartmentList"
+            [value]="v.id">{{v.name}}</ion-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-4>房型</ion-col>
+      <ion-col>
+        <ion-select [(ngModel)]="data.layoutId" placeholder="请选择房型">
+          <ion-option
+            *ngFor="let v of layoutList"
+            [value]="v.id">{{v.name}}</ion-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-4>看房时间</ion-col>
+      <ion-col>
+        <ion-datetime displayFormat="YYYY年MM月DD日" placeholder="选择看房时间" class="date"
+                      [(ngModel)]="data.startTime"></ion-datetime>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <button full-width ion-button no-margin color="main-a-40" class="submit-btn" (click)="submit()">
+    提交
+  </button>
+</ion-content>

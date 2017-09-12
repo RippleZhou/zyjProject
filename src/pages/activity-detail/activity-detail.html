@@ -1,0 +1,26 @@
+<ion-content class="activity-detail">
+  <ion-card no-margin padding full-width
+            class="top">
+    <img src="{{activity.image}}"/>
+  </ion-card>
+  <article padding>
+    <h2 class="title" no-margin>{{activity.title}}</h2>
+    <ion-row ion-text color="txt-secondary">
+      <ion-col class="date">{{activity.time | date: 'yyyy-MM-dd hh:mm:ss'}}</ion-col>
+      <ion-col no-padding col-auto>浏览量 {{activity.readCount}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col ion-text color="txt-tertiary" class="address">
+        <ion-icon name="location" ion-text no-margin no-padding></ion-icon>
+        上海市宝山区
+      </ion-col>
+    </ion-row>
+  </article>
+
+  <ion-grid class="activity-content">
+    <div>
+      <div [innerHTML]="activity.content"></div>
+    </div>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,85 @@
+page-user {
+  position: relative;
+  .user-information{
+    height: 150px;
+    text-align: center;
+    position: relative;
+    margin-top:-155px;
+    ion-avatar{
+      position: absolute;
+      left:50%;
+      margin-left:-33px;
+      img{
+        width: 65px;
+        height: 65px;
+
+      }
+    }
+    .card-title{
+      width:100%;
+      position:absolute;
+      top:75px;
+      font-size:1.75rem;
+      color:#fff;
+      .card-subtitle{
+        font-size:1.5rem;
+        margin:2px 0;
+      }
+    }
+  }
+  .user-info{
+    width: 305px;
+    height: 60px;
+    position:relative;
+    top:-22px;
+    border-radius: 10px;
+    z-index:1;
+    box-shadow: 0 0 5px 5px rgba(136,136,136,.1);
+    .moeny{
+      border-right:0.55px solid #EFEFF4;
+    }
+  }
+  .main-menu {
+    position: relative;
+    top: -60px;
+    padding:48px 10px 10px 10px;
+    font-size: 1.5rem;
+    color: #333;
+    background-color: white;
+    margin-bottom: 30px;
+    ion-col {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #EFEFF4;
+      border-right:1px solid #EFEFF4;
+      img {
+        height:28px;
+        width: 28px;
+      }
+      div {
+        margin-top: 15px;
+      }
+    }
+    ion-col:nth-child(3n) {
+      border-right:none;
+    }
+    ion-col:nth-child(n+7) {
+      border-bottom:none;
+    }
+  }
+  .bottom-tab{
+    position:fixed;
+    bottom: 0;
+    background-color: #fff;
+    ion-col{
+      height: 50px;
+      font-size: 1.5rem;
+      color:#b2b2b2;
+    }
+    ion-icon{
+      height: 30px;
+      width: 30px;
+
+    }
+  }
+}

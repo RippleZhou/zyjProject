@@ -1,0 +1,21 @@
+page-cleanning-datail {
+.cleanning-detail{
+  background-color: #EFEFF4;
+  ion-grid{
+    margin-top:10px;
+    ion-row{
+      background-color: #fff;
+      height: 44px;
+      line-height:44px;
+
+      padding:0 10px;
+    }
+    ion-col{
+      border-bottom: 0.55px solid #EFEFF4;
+    }
+    .price{
+      margin-top:10px;
+    }
+  }
+}
+}

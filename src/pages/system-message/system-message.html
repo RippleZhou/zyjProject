@@ -1,0 +1,14 @@
+
+<ion-content no-padding class="system-message">
+  <ion-list>
+    <ion-item class="activity-item" *ngFor="let act of activities" (click)="submit()">
+
+      <ion-thumbnail item-left>
+        <img src="{{act.image}}">
+      </ion-thumbnail>
+      <h2 class="title">{{act.title}}</h2>
+      <p ion-text color="txt-secondary" text-wrap class="desc">{{act.desc}}</p>
+      <p ion-text color="txt-tertiary" class="date">{{act.date |date: 'yyyy年MM月dd日'}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

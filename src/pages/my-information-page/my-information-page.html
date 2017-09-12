@@ -1,0 +1,50 @@
+
+
+
+<ion-content no-padding class="my-information">
+<ion-grid  class="info" no-padding
+           *ngIf="user"
+>
+  <ion-row class="pic">
+    <ion-col col-6 text-left>头像</ion-col>
+    <ion-col col-6 text-right>
+      <img src="{{user.portrait}}" alt="">
+    </ion-col>
+  </ion-row>
+  <ion-row  class="border-b">
+    <ion-col col-6 text-left>姓名</ion-col>
+    <ion-col col-6 text-right class="disabled">{{user.name}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6 text-left>性别</ion-col>
+    <ion-col col-6 text-right class="disabled">{{user.sex == 2? '女':'男'}}</ion-col>
+  </ion-row>
+  <ion-row  class="tel border-b">
+    <ion-col col-6 text-left class="tel">手机</ion-col>
+    <ion-col col-6 text-right class="disabled">
+      {{user.username}} <span (click)=" gotoModificationPhone()">修改</span>
+    </ion-col>
+  </ion-row>
+  <ion-row class="border-b">
+    <ion-col col-6 text-left>生日</ion-col>
+    <ion-col col-6 text-right class="disabled">{{user.username}}</ion-col>
+  </ion-row>
+  <ion-row class="border-b">
+    <ion-col col-6 text-left>身份证号</ion-col>
+    <ion-col col-6 text-right class="disabled">{{user.idcard}}</ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col text-center>
+      身份证照片
+    </ion-col>
+  </ion-row>
+  <ion-row class="id-card-img">
+    <ion-col col-6 text-center><img src="{{user.idcardFront}}" alt=""></ion-col>
+    <ion-col col-6 text-center><img src="{{user.idcardBack}}" alt=""></ion-col>
+  </ion-row>
+  <ion-row class="id-card">
+    <ion-col col-6 text-center class="disabled">身份证正面照片</ion-col>
+    <ion-col col-6 text-center class="disabled">身份证反面照片</ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

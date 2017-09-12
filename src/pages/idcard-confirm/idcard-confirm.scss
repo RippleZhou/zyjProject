@@ -1,0 +1,45 @@
+page-idcard-confirm {
+  .idcard-confirm{
+    background-color: rgba(0,0,0,.5);
+    ion-grid{
+      padding:10px;
+    }
+    .msg-confirm{
+      width: 325px;
+      height: 325px;
+      border-radius: 10px;
+      background-color: white;
+      position: absolute;
+      left: calc((100% - 325px)/2);
+      top: calc((100% - 325px)/2);
+    }
+    .pic{
+      margin-top:25px;
+      img{
+        width: 48px;
+      }
+    }
+    .info{
+      font-size: 1.875rem;
+      margin:20px 0 25px 0;
+    }
+    button{
+      border-radius: 0;
+      width: 100px;
+      height: 40px;
+      font-size:1.625rem;
+      margin-top:22px;
+      background: linear-gradient(to right,rgba(144,195,31,.4),rgba(144,195,31,1));
+      color:#fff;
+    }
+    input{
+      margin:0;
+    }
+    .msg{
+      height: 44px;
+      line-height: 44px;
+      border-bottom:0.55px solid #EFEFF4;
+    }
+
+  }
+}

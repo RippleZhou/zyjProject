@@ -1,0 +1,43 @@
+<ion-content class="activity">
+  <ion-card no-margin padding full-width class="top"
+            *ngFor="let msg of titles"
+  >
+    <img src="{{msg.img}}"/>
+    <p no-margin>
+      {{msg.title}}
+    </p>
+  </ion-card>
+
+  <ion-list>
+    <ion-item class="activity-item" *ngFor="let act of activities" (click)="gotoActivityDetailPage(act)">
+
+      <ion-thumbnail item-left>
+        <img src="{{act.image}}">
+      </ion-thumbnail>
+      <h2 class="title">{{act.title}}</h2>
+      <p ion-text color="txt-secondary" text-wrap class="desc">{{act.desc}}</p>
+      <p ion-text color="txt-tertiary" class="date">{{act.date |date: 'yyyy年MM月dd日'}}</p>
+      <p ion-text color="txt-tertiary" class="shop">{{act.shop}}</p>
+    </ion-item>
+  </ion-list>
+  <ion-grid no-padding class="bottom-tab">
+    <ion-row>
+      <ion-col col-4 ino-text text-center (click)='goHome()' >
+        <ion-icon name="qgy-home" no-margin></ion-icon>
+        <br>
+        首页
+      </ion-col>
+      <ion-col col-4  ino-text text-center
+      >
+        <ion-icon name="qgy-activity" no-margin></ion-icon>
+        <br>
+        活动
+      </ion-col>
+      <ion-col col-4  ino-text text-center (click)="goUser()">
+        <ion-icon name="qgy-mine" no-margin></ion-icon>
+        <br>
+        我的
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

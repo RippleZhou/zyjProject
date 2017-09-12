@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>青果寓</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4e8ef7">
+
+  <!-- cordova.js required for cordova apps -->
+  <!--<script src="cordova.js"></script>-->
+  <!-- include flexible.js -->
+  <!--
+  un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.log('Error', err));
+    }
+  </script>-->
+
+  <link href="build/main.css" rel="stylesheet">
+  <link href="assets/styles/style.css" rel="stylesheet">
+  <style>
+    .md-scroll-mask {
+      position: initial;
+    }
+
+    #home{
+      color:#90c31f;
+    }
+    .bottom-tab {
+      display: none;
+      width: 100%;
+      height: 55px;
+      background-color: #fff;
+      position: fixed;
+      bottom: 0;
+    }
+
+    .bottom-tab ul {
+      width: 100%;
+      height: 55px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .bottom-tab li {
+      text-align: center;
+      height: 55px;
+      font-size: 1.5rem;
+      color: #b2b2b2;
+      width: 33%;
+      float: left;
+      list-style-type: none;
+
+    }
+    p{
+      margin:5px 0 0 0;
+    }
+
+    .icon-user,.icon-home,.icon-activity{
+      font-size:22px;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Ionic's root component and where the app will load -->
+<ion-app></ion-app>
+<div class="bottom-tab" id="main-tab">
+  <ul>
+    <li id="home" onclick="goHome()">
+      <p><span class="icon-home"></span></p>
+      首页
+    </li>
+    <li id="activity" onclick="goActivity()">
+      <p><span class="icon-activity"></span></p>
+      活动
+    </li>
+    <li id="user" onclick="goUser()">
+      <p><span class="icon-user"></span></p>
+      我的
+    </li>
+  </ul>
+</div>
+
+<!-- The polyfills js is generated during the build process -->
+<script src="build/polyfills.js"></script>
+
+<!-- The bundle js is generated during the build process -->
+<script src="build/main.js"></script>
+<script>
+  var home = document.getElementsByClassName('home');
+  var activity = document.getElementsByClassName('activity');
+  var user = document.getElementsByClassName('user');
+  window.onhashchange = function () {
+      console.log(window.location.hash);
+    if (window.location.hash == "#/tab/wechat/home") {
+      window.document.getElementById('main-tab').style.display = 'block';
+      window.document.getElementById('home').style.color = '#90c31f';
+      window.document.getElementById('activity').style.color = '#b2b2b2';
+      window.document.getElementById('user').style.color = '#b2b2b2';
+    } else if (window.location.hash == "#/tab/wechat/activity") {
+      window.document.getElementById('main-tab').style.display = 'block';
+      window.document.getElementById('home').style.color = '#b2b2b2';
+      window.document.getElementById('activity').style.color = '#90c31f';
+      window.document.getElementById('user').style.color = '#b2b2b2';
+    } else if (window.location.hash == "#/tab/wechat/user") {
+      window.document.getElementById('main-tab').style.display = 'block';
+      window.document.getElementById('home').style.color = '#b2b2b2';
+      window.document.getElementById('activity').style.color = '#b2b2b2';
+      window.document.getElementById('user').style.color = '#90c31f';
+    } else {
+      window.document.getElementById('main-tab').style.display = 'none';
+    }
+  }
+  function goHome() {
+    window.location.hash = "#/tab/wechat/home";
+
+  }
+
+  function goActivity() {
+    window.location.hash = "#/tab/wechat/activity";
+  }
+
+  function goUser() {
+    window.location.hash = "#/tab/wechat/user";
+  }
+</script>
+</body>
+</html>

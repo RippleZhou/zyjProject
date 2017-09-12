@@ -1,0 +1,64 @@
+
+<ion-content no-padding class="modification">
+  <ion-grid no-padding>
+    <ion-row class="login-phone">
+    <ion-col col-1 ion-text text-left>
+      <ion-icon name="phone" no-padding no-margin class="small-icon"></ion-icon>
+    </ion-col>
+    <ion-col col-7>
+      <ion-input
+        [ngClass]="{'text-invalid':data.pastphone && !validationService.isPhoneValid(data.pastphone)}"
+        [(ngModel)]="data.pastphone" type="text" placeholder="请输入旧手机号"></ion-input>
+    </ion-col>
+    <ion-col col-4   ion-text text-right class="verification">
+      <button [disabled]="sendingVerifyCode"
+              (click)="sendVerifyCode()"
+              ion-button small no-margin
+              color="main-a-40" class="verification-code">
+        {{getVerTitle}}
+      </button>
+    </ion-col>
+  </ion-row>
+    <ion-row class="login-verifycode">
+      <ion-col col-1 ion-text text-left>
+        <ion-icon name="verification" no-padding no-margin class="small-icon"></ion-icon>
+      </ion-col>
+      <ion-col col-7>
+        <ion-input [(ngModel)]="data.verifyCode" type="text" placeholder="请输入6位验证码"></ion-input>
+      </ion-col>
+      <ion-col col-4 icon-text text-right class="trouble" >未收到验证码?</ion-col>
+    </ion-row>
+    <ion-row class="login-phone">
+      <ion-col col-1 ion-text text-left>
+        <ion-icon name="phone" no-padding no-margin class="small-icon"></ion-icon>
+      </ion-col>
+      <ion-col col-7>
+        <ion-input
+          [ngClass]="{'text-invalid':data.newphone && !validationService.isPhoneValid(data.newphone)}"
+          [(ngModel)]="data.newphone" type="text" placeholder="请输入新手机号"></ion-input>
+      </ion-col>
+      <ion-col col-4   ion-text text-right class="verification">
+        <button [disabled]="sendingVerifyCode"
+                (click)="sendVerifyCode()"
+                ion-button small no-margin
+                color="main-a-40" class="verification-code">
+          {{getVerTitle}}
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="login-verifycode newphone">
+      <ion-col col-1 ion-text text-left>
+        <ion-icon name="verification" no-padding no-margin class="small-icon"></ion-icon>
+      </ion-col>
+      <ion-col col-7>
+        <ion-input [(ngModel)]="data.verifyCode" type="text" placeholder="请输入6位验证码"></ion-input>
+      </ion-col>
+      <ion-col col-4 icon-text text-right class="trouble" >未收到验证码?</ion-col>
+    </ion-row>
+    <button full-width ion-button no-margin  class="submit-btn"
+            [disabled]="!data.phone || !data.verifyCode"
+            >
+      确认
+    </button>
+  </ion-grid>
+</ion-content>
